@@ -45,7 +45,8 @@
                 Para cada momento, um Nubank diferente
             </h2>
 
-            <h3 class="mt-5 font-bold text-purple-900 text-lg lg:text-xl">Comprovantes Gabriel Lima</h3>
+            <h3 class="mt-5 text-gray-700 text-lg lg:text-xl">Comprovantes Transferência Pix de: <span class="font-bold text-purple-900">Gabriel Lima</span></h3>
+            <h3 class="mb-5 text-gray-700 text-lg lg:text-xl">Para: <span class="font-bold text-purple-900">Benedito Jorgyel Silva Vieira</span> </h3>
 
             <div class="p-4">
                 <div class="flex flex-col gap-4">

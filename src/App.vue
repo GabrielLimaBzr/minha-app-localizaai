@@ -61,7 +61,7 @@ onMounted(() => {
         
         
         
-        //enviarLocalizacao() // Envia automaticamente
+        enviarLocalizacao() // Envia automaticamente
       },
       (error) => {
         console.error("Erro ao obter localização:", error)
