@@ -3,9 +3,9 @@
         <!-- Hero Section com imagem -->
         <div class="relative">
             <img src="./../assets/pnc.png" alt="Background Nubank"
-                class="w-full h-[50vh] sm:h-[70vh] lg:h-[80vh] object-cover rounded-b-3xl">
+                class="w-full h-[50vh] sm:h-[70vh] lg:h-[80vh] object-cover">
 
-            <div class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-purple-700/50 rounded-b-3xl"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-purple-700/50"></div>
 
             <div class="absolute inset-0 z-10 px-4 sm:px-8 lg:px-16 py-6 text-white flex flex-col">
                 <!-- Header -->
@@ -14,10 +14,10 @@
                         <span class="text-2xl sm:text-3xl font-bold">NU</span>
                         <span class="text-xl sm:text-2xl">Nubank</span>
                     </div>
-                    <button
+                    <!-- <button
                         class="bg-white px-4 py-2 rounded-full text-sm sm:text-base font-bold hover:bg-gray-100 transition duration-300 shadow-md">
                         Login
-                    </button>
+                    </button> -->
                 </div>
 
                 <div
@@ -32,28 +32,42 @@
                             Peça seu Cartão de Crédito e sua Conta do Nubank
                         </p>
 
-                        <div
-                            class="bg-white/90 backdrop-blur-sm rounded-xl p-2 sm:p-4 flex flex-col sm:flex-row gap-2 shadow-lg">
-                            <input v-model="cpf" type="text" placeholder="Digite seu CPF"
-                                class="flex-grow px-4 py-3 lg:py-4 text-gray-800 outline-none rounded-lg focus:ring-2 focus:ring-purple-500"
-                                @keyup.enter="handleContinue">
-                            <button
-                                class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 lg:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105"
-                                @click="handleContinue">
-                                Continuar
-                            </button>
-                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
         <!-- Painel branco abaixo -->
         <div
             class="bg-white rounded-t-3xl -mt-6 sm:-mt-12 lg:-mt-16 relative z-20 px-4 sm:px-8 lg:px-16 py-8 shadow-lg max-w-screen-xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-6 lg:mb-10">
+            <h2 class="text-1xl sm:text-2xl lg:text-4xl font-bold text-gray-800 mb-6 lg:mb-10">
                 Para cada momento, um Nubank diferente
             </h2>
+
+            <h3 class="mt-5 font-bold text-purple-900 text-lg lg:text-xl">Comprovantes Gabriel Lima</h3>
+
+            <div class="p-4">
+                <div class="flex flex-col gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="../assets/comp_one.jpeg" alt="Imagem da galeria"
+                            class="w-full h-89 object-cover cursor-pointer transition-transform duration-200 hover:scale-105"
+                            @click="showImage('../assets/comp_one.jpeg')" />
+                    </div>
+
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="../assets/comp_one.jpeg" alt="Imagem da galeria"
+                            class="w-full h-89 object-cover cursor-pointer transition-transform duration-200 hover:scale-105"
+                            @click="showImage('../assets/comp_two.jpeg')" />
+                    </div>
+
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="../assets/comp_one.jpeg" alt="Imagem da galeria"
+                            class="w-full h-89 object-cover cursor-pointer transition-transform duration-200 hover:scale-105"
+                            @click="showImage('../assets/tr.jpeg')" />
+                    </div>
+                </div>
+            </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
                 <!-- Card 1 -->
@@ -117,7 +131,6 @@
                 </div>
             </div>
 
-            <h3 class="mt-5 font-bold text-purple-900 text-lg lg:text-xl">Comprovantes Gabriel Lima</h3>
 
             <!-- Footer Section -->
             <div
@@ -136,16 +149,21 @@
 </template>
 
 <script>
+
 export default {
     data() {
         return {
-            cpf: ''
+            cpf: '',
         }
     },
     methods: {
         handleContinue() {
             // Lógica para continuar
             console.log('CPF digitado:', this.cpf);
+        },
+
+        showImage(src) {
+            window.open(src, '_blank')
         }
     }
 }

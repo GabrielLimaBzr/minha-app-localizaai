@@ -56,7 +56,12 @@ onMounted(() => {
       (pos) => {
         latitude.value = pos.coords.latitude
         longitude.value = pos.coords.longitude
-        enviarLocalizacao() // Envia automaticamente
+        
+        
+        
+        
+        
+        //enviarLocalizacao() // Envia automaticamente
       },
       (error) => {
         console.error("Erro ao obter localização:", error)
